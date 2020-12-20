@@ -1,50 +1,4 @@
 #include <iostream>
-/*
-Student name: Christopher Oka
-Student number: 20892372
-
-SYDE 121 Test #1: Control Flow (Question 3)
-Filename: control_flow.cpp
-
- I hereby declare that this code, submitted for credit for the course
- SYDE121, is a product of my own efforts. This coded solution has
- not been plagiarized from other sources and has not been knowingly plagiarized by others.
-
- Project: 121 Test
- Purpose:
- Due date: Friday, October 23
-
-*/
-/*
-Program steps:
-1. Create an input function that will allow the user to enter an
-integer number that is greater than 1000000. If the number
-does not exceed 1000000, the user is prompted to enter another
-number
-2. The number is returned from this function
-3. Create a processing function that takes the inputted number
-4. Iterates through the given number from the back until a 7
-is found. This is done by using the modulus operator and
-the division operator to break down the number into its
-digits.
-5. If a 7 is not found, 0 is printed
-6. If a 7 is found, the program outputs each digit until 
-another 7 is found. If it is not found, everything after the first
-7 is outputted.
-*/
-
-/*
-Tested values:
-1234568 because there are no 7s
-1234567 because there is a single 7 at the end
-7123456 because there is a single 7 at the front
-1237745 because there are two adjacent 7s
-7123457 because two 7s cap the number off at both ends
-1237475 because two 7s contain a number
-7097987 because there are three 7s
-
-All tested values work!
-*/
 
 int input() {
 	//PURPOSE: Let a user input a number greater than 1000000
@@ -100,11 +54,5 @@ void number_processor() {
 }
 
 int main() {
-	std::cout << "For 1234567, expected values are 123456\n";
-	std::cout << "For 7123456, expected values are 0\n";
-	std::cout << "For 1237745, expected values are 0\n";
-	std::cout << "For 7123457, expected values are 12345\n";
-	std::cout << "For 1237475, expected values are 4\n";
-	std::cout << "For 7097987, expected values are 98\n";
 	number_processor();
 }
